@@ -1,0 +1,226 @@
+.program {
+  margin-bottom: 80px;
+  padding: 60px 0 80px;
+  background-image: url(../img/program/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  &__wrapper {
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #101010;
+  }
+
+  &__items {
+    width: 100%;
+    max-width: 1170px;
+    padding-left: 30px;
+    margin: 0 auto 40px;
+  }
+
+  &__item {
+    border-radius: 20px;
+    border: 1px solid #232323;
+    background-image: url(../img/program/item.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    margin-bottom: 40px;
+    padding: 48px 70px;
+    display: flex;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-dec {
+    position: absolute;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #fe2c55;
+    padding: 4px 0;
+    height: 30px;
+    width: 100%;
+    max-width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: -0.64px;
+    transform-origin: center;
+    transform: rotate(-90deg);
+    left: -71px;
+    top: 85px;
+  }
+
+  &__item-info {
+    width: 100%;
+    max-width: 570px;
+    margin-right: 30px;
+  }
+
+  &__item-title {
+    margin-bottom: 20px;
+  }
+
+  &__lesson {
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__lesson-info {
+    display: flex;
+    margin-bottom: 12px;
+  }
+
+  &__lesson-info-num {
+    margin-right: 30px;
+  }
+
+  &__lesson-info-day {
+    opacity: 0.5;
+  }
+
+  &__lesson-title {
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__list-item {
+    padding-left: 24px;
+    position: relative;
+    letter-spacing: -0.64px;
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 7px;
+      border-radius: 50%;
+      background-color: #fe2c55;
+      box-shadow: 0px 0px 10px 0px #b71017;
+    }
+  }
+
+  &__item-result {
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-image: linear-gradient(
+      134deg,
+      rgba(64, 64, 64, 1) 0%,
+      rgba(246, 246, 246, 0.3) 37.5%,
+      rgba(174, 167, 167, 0.3) 66.15%,
+      rgba(7, 7, 7, 1) 100%
+    );
+    background-color: #232323;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8) inset;
+    padding: 40px 32px;
+    height: fit-content;
+    min-height: 308px;
+  }
+
+  &__item-result-title {
+    margin-bottom: 20px;
+  }
+
+  &__item-result-img {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    right: -30px;
+    bottom: -11px;
+    box-shadow: -4px -4px 20px 0px rgba(0, 0, 0, 0.4);
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 370px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .program {
+    &__item-result-img {
+      bottom: -30px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .program {
+    &__item {
+      padding: 48px;
+    }
+    &__item-result {
+      max-width: 300px;
+    }
+    &__item-result-img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .program {
+    margin-bottom: 60px;
+    &__items {
+      padding-left: 0;
+    }
+    &__item {
+      padding: 48px 20px;
+      flex-direction: column;
+      margin-bottom: 60px;
+    }
+    &__item-info {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    &__item-result {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: 30px;
+      padding: 40px 20px;
+    }
+    &__item-result-img {
+      width: 100px;
+      height: 100px;
+    }
+    &__item-dec {
+      transform: rotate(0);
+      left: 20px;
+      top: -31px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .program {
+    &__item-result-img {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.modal {
+  &__wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(38, 36, 39, 0.9);
+    display: none;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 100px 15px;
+    overflow: auto;
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 570px;
+    min-height: 684px;
+    height: fit-content;
+    position: relative;
+  }
+
+  &__btn-close {
+    position: absolute;
+    right: 28px;
+    top: 28px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 30px;
+    display: flex;
+
+    span {
+      font-size: 20px;
+      &::before {
+        color: var(--color-select);
+      }
+    }
+  }
+}
+
+.close-button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.close-button svg {
+  display: block;
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+}
+
+@media (max-width: 550px) {
+  .modal {
+    &__content {
+      min-height: 550px;
+    }
+  }
+}

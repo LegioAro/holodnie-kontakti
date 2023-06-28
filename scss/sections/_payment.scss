@@ -1,0 +1,50 @@
+.payment {
+  position: relative;
+
+  .tape {
+    bottom: 0;
+  }
+  &__wrapper {
+    width: 100%;
+    max-width: 967px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 470px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.88px;
+    text-transform: lowercase;
+  }
+
+  &__timer {
+  }
+}
+
+@media (max-width: 900px) {
+  .payment {
+    &__wrapper {
+      flex-direction: column;
+      padding-bottom: 80px;
+    }
+    &__info {
+      margin-bottom: 50px;
+    }
+    &__timer {
+      margin: 0 auto;
+    }
+  }
+}

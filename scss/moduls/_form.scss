@@ -1,0 +1,111 @@
+.form {
+  width: 100%;
+  max-width: 580px;
+  padding: 78px 100px;
+  box-shadow: 0px 2.97436px 74.359px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background: #fff;
+  color: #101010;
+  text-align: center;
+  min-height: 630px;
+
+  &__title {
+    font-family: var(--font-text-2);
+    text-align: center;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.88px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: -0.84px;
+    margin-bottom: 32px;
+  }
+
+  &__inputs {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  &__input-block {
+    width: 100%;
+    margin-bottom: 24px;
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    font-family: var(--font-text);
+    font-weight: 300;
+    font-size: 14.8718px;
+    line-height: 145%;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #101010;
+    opacity: 0.699999988079071;
+    background: #fff;
+    padding: 24px 23px;
+    transition: 0.3s;
+
+    &:focus {
+      //   outline: 0.74359px solid rgba(0, 0, 0, 0.5);
+      outline: 0;
+      border: 0.74359px solid rgba(0, 0, 0, 0.5);
+    }
+
+    &::placeholder {
+      font-family: var(--font-text);
+      font-weight: 300;
+      font-size: 14.8718px;
+      line-height: 145%;
+      color: #000000;
+      opacity: 0.6;
+    }
+
+    &.novalid {
+      border: 0.74359px solid #ea3030;
+      & + .form__input-text {
+        display: block;
+      }
+    }
+  }
+
+  &__input-text {
+    font-weight: 400;
+    font-size: 14.8718px;
+    line-height: 145%;
+    color: #ea3030;
+    text-align: left;
+    position: absolute;
+    left: 24px;
+    top: calc(100% + 3px);
+    display: none;
+
+    &.novalid {
+      display: block;
+    }
+  }
+
+  &__btn {
+    .btn {
+      //   font-size: 20px;
+      //   padding: 25px 10px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    min-height: 565px;
+    padding: 65px 20px 50px;
+  }
+}

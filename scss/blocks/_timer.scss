@@ -1,0 +1,78 @@
+.timer {
+  &__items {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 8px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item-nums {
+    display: flex;
+    margin-bottom: 8px;
+  }
+
+  &__item-num {
+    width: 56px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+    font-family: var(--font-text-2);
+
+    color: #fe2c55;
+    text-align: right;
+    font-size: 50.4px;
+    font-family: Days One;
+    line-height: 140%;
+    letter-spacing: -2.016px;
+    text-transform: uppercase;
+    border-radius: 8.4px;
+    background-color: #fff;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item-text {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: -0.48px;
+    opacity: 0.5;
+  }
+
+  &__separator {
+    margin-right: 8px;
+    font-family: var(--font-text-2);
+    color: #fe2c55;
+    font-size: 50.4px;
+    line-height: 140%;
+    letter-spacing: -2.016px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 450px) {
+  .timer {
+    &__item-num {
+      width: 40px;
+      font-size: 40px;
+    }
+  }
+}
+@media (max-width: 350px) {
+  .timer {
+    &__item-num {
+      width: 32px;
+      height: 50px;
+      font-size: 28px;
+    }
+    &__separator {
+      font-size: 35px;
+    }
+  }
+}

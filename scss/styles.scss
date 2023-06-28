@@ -1,0 +1,31 @@
+//Global
+@import './global/fonts';
+@import './global/var';
+@import './global/reset';
+@import './global/global';
+
+//Moduls
+@import './moduls/title';
+@import './moduls/btn';
+@import './moduls/modal';
+@import './moduls/form';
+
+//Blocks
+@import './blocks/timer';
+
+//Sections
+@import './sections/header';
+@import './sections/reasons';
+@import './sections/if';
+@import './sections/advantages';
+@import './sections/acquaintance';
+@import './sections/results';
+@import './sections/who';
+@import './sections/slider';
+@import './sections/skils';
+@import './sections/desc';
+@import './sections/program';
+@import './sections/education';
+@import './sections/packages';
+@import './sections/payment';
+@import './sections/footer';

@@ -1,0 +1,152 @@
+.slider {
+  margin-bottom: 80px;
+  &__wrapper {
+    width: 100%;
+    max-width: 970px;
+    padding: 32px 100px;
+    border-radius: 20px;
+    color: #101010;
+    background-color: #fff;
+    margin: 0 auto;
+    position: relative;
+    background-image: url(../img/slider/bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 26px;
+  }
+
+  &__items {
+    overflow: hidden;
+    margin-bottom: 17px;
+  }
+
+  &__item {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 432px;
+    display: flex;
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__arrows {
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fe2c55;
+    border-radius: 10px;
+    cursor: pointer;
+    top: 50%;
+    // transform: translateY(-50%);
+    z-index: 1;
+    &.swiper-button-disabled {
+      background-color: #aea7a7;
+    }
+
+    img {
+      width: 17px;
+      display: flex;
+      object-fit: contain;
+    }
+  }
+
+  &__arrow--l {
+    left: -30px;
+  }
+
+  &__arrow--r {
+    right: -30px;
+  }
+
+  &__dots {
+    max-width: fit-content;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__dot {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid #fe2c55;
+    margin-right: 8px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+    &--active {
+      background-color: #fe2c55;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .slider {
+    &__arrow--l {
+      left: -15px;
+    }
+
+    &__arrow--r {
+      right: -15px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .slider {
+    &__item {
+      height: 350px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    &__wrapper {
+      padding: 32px 50px;
+    }
+    &__item {
+      height: 300px;
+    }
+    &__arrow {
+      width: 40px;
+      height: 40px;
+      img {
+        width: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .slider {
+    &__wrapper {
+      padding: 32px;
+    }
+    &__item {
+      height: 250px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .slider {
+    &__item {
+      height: 200px;
+    }
+  }
+}
