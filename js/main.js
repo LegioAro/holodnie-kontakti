@@ -34,7 +34,7 @@ const swiper2 = new Swiper('.swiper-2', {
 });
 
 function isTimer() {
-  const minutesDeadline = new Date(2023, 6, 1, 12);
+  const minutesDeadline = new Date(2023, 5, 30, 23, 59);
 
   let timerHours = document.querySelector('[data-timer-hour]');
   let timerMinuts = document.querySelector('[data-timer-min]');
@@ -52,7 +52,7 @@ function isTimer() {
       clearInterval(timerId);
     }
 
-    const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
+    const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) : 0;
     const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
     const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
 
